@@ -1,1 +1,56 @@
+/* Custom Utilities for Hamburger Menu Animation */
+        .hamburger-line {
+            width: 30px;
+            height: 2px;
+            display: block;
+            margin-bottom: 5px;
+            background-color: #0f172a;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .hamburger-active > span:nth-child(1) {
+            transform: rotate(45deg);
+            transform-origin: 10% 10%;
+        }
+        
+        .hamburger-active > span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger-active > span:nth-child(3) {
+            transform: rotate(-45deg);
+            transform-origin: 10% 90%;
+        }
 
+        /* SVG Icons fill transition */
+        .social-link svg {
+            fill: #64748b;
+            transition: fill 0.3s ease;
+        }
+        .social-link:hover svg {
+            fill: #14b8a6; /* primary */
+        }
+        
+        /* Toggle Switch Animation */
+        #dark-toggle:checked ~ label .toggle-circle {
+            transform: translateX(100%);
+        }
+
+        /* Floating Animation for WhatsApp */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover;
+            border: 3px solid #007bff;
+            margin-bottom: 10px;
+        }
